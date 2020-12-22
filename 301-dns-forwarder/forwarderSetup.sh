@@ -33,7 +33,7 @@ options {
         };
         forward only;
 
-        dnssec-validation auto;
+        dnssec-validation no; #Azure dns does not support dnssec. Setting it to auto will cause servfail
 
         auth-nxdomain no;    # conform to RFC1035
         listen-on { any; };
